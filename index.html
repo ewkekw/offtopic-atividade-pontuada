@@ -6,22 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atividade pontuada</title>
     <link rel="stylesheet" href="./styles/style.css">
+    <script>
+        function tocarMusica() {
+            var audio = document.querySelector('.conteudo__musica');
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.currentTime = 0;
+            }
+        }
+    </script>
 </head>
 
 <body>
     <header class="cabecalho">
         <nav class="cabecalho__links">
-            <a href="index.html">Home</a>
-            <a href="https://portfolio-alura-estudos.vercel.app/about.html">Sobre mim</a>
-            <a href="https://github.com/ewkekw">Projetos</a>
-            <a href="https://portfolio-alura-estudos.vercel.app/">Contatos</a>
+            <a class="cabecalho__links__ancora" href="index.html">Home</a>
+            <a class="cabecalho__links__ancora" href="https://portfolio-alura-estudos.vercel.app/about.html">Sobre
+                mim</a>
+            <a class="cabecalho__links__ancora" href="https://github.com/ewkekw">Projetos</a>
+            <a class="cabecalho__links__ancora" href="https://portfolio-alura-estudos.vercel.app/">Contatos</a>
         </nav>
     </header>
     <main class="conteudo">
-        <img src="cavalo.gif" alt="img representativa pra atividade">
-        <audio class="conteudo__musica" autoplay loop>
+        <img class="conteudo__imagem" src="cavalo.gif" alt="img representativa pra atividade">
+        <audio class="conteudo__musica">
             <source src="subi.mp3" type="audio/mp3">
+            Seu navegador não suporta o elemento de áudio.
         </audio>
+        <button onclick="tocarMusica()">
+            Subi no pé de peira
+        </button>
     </main>
     <footer class="rodape">
         <p>Rodapé fuleiro</p>
